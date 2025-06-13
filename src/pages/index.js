@@ -156,7 +156,7 @@ export default function Home() {
       </Head>
 
       <nav>
-        <h1>GlowCare</h1>
+        <h1>GokulCare</h1>
         <ul>
           <li>Home</li>
           <li>Shop</li>
