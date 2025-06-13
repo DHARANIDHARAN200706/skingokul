@@ -24,134 +24,108 @@ export default function Home() {
     <div className="container">
       <Head>
       <style>{`
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top left, #f0f4ff, #dfe9f3);
-  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
 
-  .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 1rem;
-  }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
 
-  nav {
-    width: 100%;
-    background: #4b0082;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 6px 12px rgba(75, 0, 130, 0.2);
-  }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  nav ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+    nav h1 {
+      margin: 0;
+      font-size: 20px;
+    }
 
-  nav li {
-    cursor: pointer;
-    font-weight: 500;
-    transition: color 0.2s, transform 0.2s;
-  }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
 
-  nav li:hover {
-    color: #ffd700;
-    transform: scale(1.1);
-  }
+    nav li {
+      cursor: pointer;
+    }
 
-  .main-content {
-    padding-top: 110px;
-    text-align: center;
-    width: 95%;
-    max-width: 850px;
-  }
+    .main-content {
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
 
-  h2 {
-    font-size: 2.75rem;
-    color: #4b0082;
-    font-weight: 700;
-    margin-bottom: 1.2rem;
-    animation: fadeSlideDown 0.9s ease-out;
-  }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-  @keyframes fadeSlideDown {
-    from { opacity: 0; transform: translateY(-40px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+    p {
+      margin-bottom: 15px;
+    }
 
-  textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #b39ddb;
-    border-radius: 0.75rem;
-    margin-bottom: 1.25rem;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    resize: vertical;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
 
-  textarea:focus {
-    outline: none;
-    border-color: #4b0082;
-    box-shadow: 0 0 10px rgba(75,0,130,0.3);
-  }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-  button {
-    background: linear-gradient(135deg, #6a5acd, #7b68ee);
-    color: white;
-    padding: 0.8rem 2.2rem;
-    font-weight: 600;
-    border-radius: 2rem;
-    border: none;
-    box-shadow: 0 5px 12px rgba(106, 90, 205, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+    button:disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
 
-  button:hover {
-    background: linear-gradient(135deg, #7b68ee, #6a5acd);
-    transform: translateY(-2px) scale(1.03);
-  }
+    .response-box {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #333;
+      border-radius: 4px;
+    }
 
-  .response-box {
-    margin-top: 2.5rem;
-    background: #ffffff;
-    border: 1px solid #ddd6f3;
-    padding: 1.75rem;
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 20px rgba(106, 90, 205, 0.1);
-    animation: fadeIn 1s ease-in-out;
-  }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ccc;
+    }
+  `}</style>
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
 
-  footer {
-    margin-top: 3rem;
-    padding: 1rem;
-    text-align: center;
-    color: #6c757d;
-    font-size: 0.9rem;
-    border-top: 1px solid #b39ddb;
-  }
-`}</style>
 
       </Head>
 
