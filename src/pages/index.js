@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <style>{`
+      <style>{`
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -153,3 +153,39 @@ export default function Home() {
   }
 `}</style>
 
+      </Head>
+
+      <nav>
+        <h1>GlowCare</h1>
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+
+      <main className="main-content">
+        <h2>AI Skin Care Product Advisor</h2>
+        <p>Describe your skin concerns or goals and get personalized product suggestions from our AI!</p>
+        <textarea
+          rows={8}
+          placeholder="e.g., I have oily skin and want a natural cleanser."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button onClick={handleSubmit} disabled={loading}>
+          {loading ? 'Finding products...' : 'Get Recommendations'}
+        </button>
+
+        {response && (
+          <div className="response-box">
+            <h3>Recommended Products:</h3>
+            <p>{response}</p>
+          </div>
+        )}
+      </main>
+
+      <footer>© 2025 GlowCare. All rights reserved.</footer>
+    </div>
+  );
+}
